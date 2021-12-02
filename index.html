@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CodePen - Dynamically Add-Remove Rows from Table</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table class="table">
+      <tr>
+        <th>Index</th>
+        <th>Key</th>
+        <th>Value</th>
+        <th>Required</th>
+        <th>Unique</th>
+        <th data-attr-ignore>Remove</th>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td contenteditable="true" class="bharath" data-attr-key="42">Cell Content 1</td>
+        <td contenteditable="true" data-attr-value="42">Cell Value 1</td>
+        <td><input type="checkbox" name="Required" value="42"></td>
+        <td><input type="checkbox" name="Unique" value="42"></td>
+        <td><span class="table-remove glyphicon glyphicon-remove"></span></td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td contenteditable="true" class="bharath" data-attr-key="63">Cell Content 2</td>
+        <td contenteditable="true" data-attr-value="63">Cell Value 2</td>
+        <td><input type="checkbox" name="Required" value="63"></td>
+        <td><input type="checkbox" name="Unique" value="63"></td>
+        <td><span class="table-remove glyphicon glyphicon-remove"></span></td>
+      </tr>
+      <!-- This is our clonable table line -->
+      <tr class="hide">
+        <td>-</td>
+        <td contenteditable="true">Untitled</td>
+        <td contenteditable="true">undefined</td>
+        <td><input type="checkbox" name="Required" value="0"></td>
+        <td><input type="checkbox" name="Unique" value="0"></td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button id="export-btn" class="btn btn-primary">Export Data</button>
+  <p id="export"></p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
